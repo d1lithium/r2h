@@ -20,10 +20,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.cyphersol.r2h.ui.theme.R2hTheme
 import com.cyphersol.r2h.ui.theme.Shapes
+import org.intellij.lang.annotations.JdkConstants
 
 class LoadingScreen : ComponentActivity() {
 
@@ -35,41 +37,53 @@ class LoadingScreen : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    loadLoginScreen()
+                    LoginScreen()
                 }
             }
         }
     }
 }
 @Composable
-fun loadLoginScreen() {
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = Color.LightGray
-    ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center,
+fun LoginScreen() {
+   Surface(
+       modifier = Modifier.fillMaxSize()
+   ) {
+       Column(
+           horizontalAlignment = Alignment.CenterHorizontally,
+           verticalArrangement = Arrangement.Center
 
+       ) {
+           Column(
+               verticalArrangement = Arrangement.spacedBy(10.dp)
+           ) {
+               Button(
+                   onClick = {},
+                   modifier = Modifier
+                       .width(90.dp)
+                       .height(40.dp)
+               ) {
+                   Text(text = "login")
 
+               }
+               Button(
+                   onClick = {},
+                   modifier = Modifier
+                       .width(180.dp)
+                       .height(40.dp)
+               ) {
+                   Text(text = "Sign up with google")
 
-        ) {
-            Button(
-                onClick = {},
-                modifier = Modifier
-                    .width(90.dp)
-                    .height(40.dp)) {
-                Text(text = "login")
+               }
+           }
+       }
 
-            }
-
-        }
-    }
+   }
 }
+
 @Preview
 @Composable
 fun ShowPreview() {
     R2hTheme {
-       loadLoginScreen() 
+       LoginScreen()
     }
 }
