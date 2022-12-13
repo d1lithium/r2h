@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">r2h</string>
+    <string name="title_activity_journey_search_screen">JourneySearchScreen</string>
 </resources>
