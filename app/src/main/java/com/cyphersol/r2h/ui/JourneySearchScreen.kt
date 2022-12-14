@@ -100,7 +100,7 @@ fun JourneyScreen() {
 @Composable
 fun FromDropDownMenu() {
     val contextForToast  = LocalContext.current.applicationContext
-    val listItems = arrayOf("Location 1","Location 2","Location 3")
+    val listItems = (1..5).map { "option $it" }
     var selectedItem by remember { mutableStateOf(listItems[0])}
     var expanded by remember { mutableStateOf(false)}
 
@@ -119,7 +119,6 @@ fun FromDropDownMenu() {
             )
         }
     }
-    //menu
 
 
 
