@@ -124,18 +124,6 @@ var icon = if (expanded)
 
 
 
-/*    ExposedDropdownMenuBox(
-        expanded = expanded,
-        onExpandedChange = { expanded = !expanded },
-    ) {
-        TextField(
-            value = selectedItem,
-            onValueChange = {},
-            readOnly = true
-        )
-    }
-*/
-
 
 
 
