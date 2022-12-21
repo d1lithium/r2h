@@ -61,10 +61,15 @@ Surface(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Row( horizontalArrangement = Arrangement.Center,
+        Row( horizontalArrangement = Arrangement.SpaceEvenly,
              verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.height(60.dp).padding(start = 20.dp, end = 20.dp)) {
-            FromDropDownMenu()
+            DropDownMenu("To")
+        }
+        Row( horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.height(60.dp).padding(start = 20.dp, end = 20.dp)) {
+            DropDownMenu("From")
         }
 
     }
@@ -73,7 +78,7 @@ Surface(
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun FromDropDownMenu() {
+fun DropDownMenu(label: String) {
 val contextForToast  = LocalContext.current.applicationContext
 val listItems = (1..5).map { "option $it" }
 var selectedItem by remember { mutableStateOf(listItems[0])}
@@ -92,7 +97,7 @@ var icon = if (expanded)
                          .onGloballyPositioned { layoutCoordinates ->
                              mTextFieldSize = layoutCoordinates.size.toSize()
                          },
-                     label = {Text("Label")},
+                     label = {Text(label)},
                      trailingIcon = {Icon(icon,"contentDescription",
                                          Modifier.clickable { expanded = !expanded })}
 
