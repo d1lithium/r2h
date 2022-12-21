@@ -17,8 +17,10 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
+import com.cyphersol.r2h.R
 import com.cyphersol.r2h.ui.theme.R2hTheme
 import kotlin.math.exp
 
@@ -52,7 +54,7 @@ Surface(
         verticalAlignment = Alignment.Top
     ) {
         Text(
-            text = "Journey Search",
+            text = stringResource(id = R.string.titleJourneySearch),
             fontSize = 30.sp
         )
 
@@ -63,13 +65,17 @@ Surface(
     ) {
         Row( horizontalArrangement = Arrangement.SpaceEvenly,
              verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.height(60.dp).padding(start = 20.dp, end = 20.dp)) {
-            DropDownMenu("To")
+        modifier = Modifier
+            .height(60.dp)
+            .padding(start = 20.dp, end = 20.dp)) {
+            DropDownMenu(stringResource(id = R.string.journeySearch_to))
         }
         Row( horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.height(60.dp).padding(start = 20.dp, end = 20.dp)) {
-            DropDownMenu("From")
+            modifier = Modifier
+                .height(60.dp)
+                .padding(start = 20.dp, end = 20.dp)) {
+            DropDownMenu(stringResource(id = R.string.journeySearch_from))
         }
 
     }
