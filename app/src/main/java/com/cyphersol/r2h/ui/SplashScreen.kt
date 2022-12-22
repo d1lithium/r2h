@@ -1,4 +1,4 @@
-package com.cyphersol.r2h
+package com.cyphersol.r2h.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -16,6 +16,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import com.cyphersol.r2h.R
 import com.cyphersol.r2h.ui.theme.R2hTheme
 
 class SplashScreen : ComponentActivity() {
@@ -46,7 +47,7 @@ fun LogoScreen() {
         ){
 
             Text(
-                text = stringResource(R.string.app_name),
+                text = stringResource(id = R.string.app_name),
                 fontWeight = FontWeight.ExtraBold,
                 fontSize = 80.sp,
                 color = Color.White

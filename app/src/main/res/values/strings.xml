@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">r2h</string>
-    <string name="title_activity_journey_search_screen">JourneySearchScreen</string>
+    <string name="title_activity_journey_searchscreen">JourneySearchScreen</string>
+    <string name = "title_activity_confirmationscreen">ConfirmationScreen</string>
+    <string name = "title_activity_loginscreen">LoginScreen</string>
+    <string name="title_activity_splashscreen">SplashScreen</string>
     <string name="titleJourneySearch">Journey Search</string>
     <string name="journeySearch_to">From</string>
     <string name="journeySearch_from">To</string>

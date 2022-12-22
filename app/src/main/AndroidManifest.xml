@@ -14,22 +14,31 @@
         android:theme="@style/Theme.R2h"
         tools:targetApi="31">
         <activity
-            android:name=".ui.JourneySearchScreen"
+            android:name=".ui.SplashScreen"
             android:exported="true"
-            android:label="@string/title_activity_journey_search_screen"
-            android:theme="@style/Theme.R2h" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            android:label="@string/title_activity_splashscreen"
+            android:theme="@style/Theme.R2h">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".SplashScreen"
+            android:name=".ui.LoginScreen"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.R2h">
+            android:label="@string/title_activity_loginscreen"></activity>
 
-        </activity>
+        <activity
+            android:name=".ui.JourneySearchScreen"
+            android:exported="true"
+            android:label="@string/title_activity_journey_searchscreen"
+            android:theme="@style/Theme.R2h"></activity>
+        <activity
+            android:name=".ui.ConfirmationScreen"
+            android:exported="false"
+            android:label="@string/title_activity_confirmationscreen"></activity>
+
+
     </application>
 
 </manifest>
