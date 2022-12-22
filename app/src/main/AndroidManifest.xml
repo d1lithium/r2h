@@ -24,8 +24,8 @@
         </intent-filter>
         </activity>
         <activity
-            android:name=".ui.LoadingScreen"
-            android:exported="false"
+            android:name=".SplashScreen"
+            android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.R2h">
 
